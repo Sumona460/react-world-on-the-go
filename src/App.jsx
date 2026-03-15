@@ -4,7 +4,7 @@ import './App.css'
 import Countries from './components/countries';
 
 
-const countriesPromise = fetch('https://openapi.programming-hero.com/api/all')
+const CountriesPromise = fetch('https://openapi.programming-hero.com/api/all')
 .then(res => res.json())
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         
         
         <Suspense fallback={<p>Countries are loading...</p>}>
-           <Countries countriesPromise={countriesPromise}></Countries>
+           <Countries CountriesPromise={CountriesPromise}></Countries>
         </Suspense>
          
        
